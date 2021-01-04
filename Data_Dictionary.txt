@@ -1,0 +1,60 @@
+Data Dictionary for the respective tables as outlined in step 3
+
+facts_table
+- imm_id int - unique identifier for each instance of immigration
+- date_id date - based on arrival date - from i94 dataset
+- dest_id varchar - 2 letter US State abbreviation - from i94 dataset
+- origin_id varchar - country of origin
+- airport_id varchar - 3 character airport code (limited to large airports) - from i94 dataset
+    
+destination_table
+- dest_id varchar - 2 letter US State abbreviation - from cities dataset
+- state varchar - 2 letter US State abbreviation - from cities dataset
+- median_age float - median age of the state's population
+- population float - population as a percent of the US total
+- white float - racial population as a percent of the state's total population
+- black float - racial population as a percent of the state's total population
+- asian float - racial population as a percent of the state's total population
+- latino float - racial population as a percent of the state's total population
+- native_american float - racial population as a percent of the state's total population
+- foreign_born float - foreign-born population as a percent of the state's total population
+    
+geography_table
+- airport_id varchar - 3 character airport code (limited to large airports) - from airports dataset
+- state varchar - 2 letter US State abbreviation - from cities dataset
+- country varchar - country name - from airports dataset
+- city varchar - city name - from airports dataset
+- airport_name varchar - name of airport
+- elevation int - elevation in feet of airport - from airports dataset
+- continent varchar - name of continent - from airports dataset
+- avg_yrly_temp float - average temperature of 2013
+- mnthly_high_temp float - highest monthly temperature of 2013
+- mnthly_low_temp float - lowest monthly temperature of 2013
+- temp_delta_10_yrs float - increase/decrease in yearly average temperature from 2003 to 2013
+- temp_delta_20_yrs float - increase/decrease in yearly average temperature from 1993 to 2013
+    
+date_table
+- date_id date - based on arrival date - from i94 dataset
+- day int - day of arrival date
+- week int - week of arrival date
+- month int - month of arrival date
+- year int - year of arrival date
+
+immigration_table
+- imm_id int - unique identifier for each instance of immigration
+- country_of_origin varchar - same as origin_id in facts_table
+- visatype varchar - class of stay
+- i94_date date - date immigration case was added to record
+- departure_date date - date immigrant departed from US
+- birth_year int - birth year of immigrant
+- age int - age of immigrant
+- gender varchar - gender of immigrant
+- mode_transport varchar - air, sea or land
+- dos_issuing_office varchar - department of state office issuing visa
+- arrival_flag varchar - flag for arrival to US
+- update_flag varchar - flag for update of status in US
+- departure_flag varchar - flag for departure from US
+- matching_flag varchar - flag for matching of arrival and departure
+- airline varchar - airline flown to arrive in US
+- visa_reason varchar - business, pleasure or student
+- occupation varchar - occupation to be performed in US
