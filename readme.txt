@@ -7,4 +7,4 @@ Temperature and Immigration datasets are too large to upload to Github.
 Files:
 4 Jupyter Notebooks labeled Steps 1-4 (Step 3 is information only)
 Capstone Writeup.pdf
-Various data files
+Various data files in subfolders
